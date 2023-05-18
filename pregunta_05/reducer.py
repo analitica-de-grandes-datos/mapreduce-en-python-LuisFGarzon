@@ -21,4 +21,4 @@ if __name__ == '__main__':
             clave = key
             tot = val
 
-    sys.stdout.write("{},{}\n".format(clave, tot))
+    sys.stdout.write("{}\t{}\n".format(clave, tot))

@@ -1,19 +1,22 @@
 #
 # >>> Escriba el codigo del reducer a partir de este punto <<<
 #
+import operator
 import sys
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
-    lista1 = []
+    dict = {}
+    
 
     for line in sys.stdin:
-        key, val = line.split(",")
+
+        key, val = line.split('\t')
         val = int(val)
+        dict[key] = val
 
-        lista1.append((key, val))
+    sortedDict = sorted(dict.items(), key = operator.itemgetter(1))
+    for line in sortedDict:
+              
 
-        lista1.sort(key=lambda i: i[1], reverse=False)
-
-    for elemento in lista1:
-        sys.stdout.write("{},{}\n".format(elemento[0], elemento[1]))
+        sys.stdout.write('{},{}\n'.format(line[0], line[1]))
