@@ -16,9 +16,11 @@ if __name__ == '__main__':
             tot += val
         else:
             if clave is not None:
-                sys.stdout.write("{},{}\n".format(clave, tot))
+                sys.stdout.write("{}\t{}\n".format(clave, tot))
 
             clave = key
             tot = val
 
     sys.stdout.write("{}\t{}\n".format(clave, tot))
+
+    
