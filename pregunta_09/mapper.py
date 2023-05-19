@@ -4,5 +4,5 @@
 import sys
 if __name__ == "__main__":
     for line in sys.stdin:
-        key,val1,val2    =   line.strip().split('   ')
+        key,val1,val2    =   line.split()
         sys.stdout.write('{}\t{}\t{}\n'.format(key,val1,val2))
