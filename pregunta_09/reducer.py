@@ -3,9 +3,10 @@
 #
 import sys
 
-if __name__ == "__main__":
-    list_tuple = [tuple(line.strip().split("\t")) for line in sys.stdin]
-    list_tuple = sorted(list_tuple, key=lambda x: int(x[2]))[:5]
+if __name__ == '__main__':
+    lista = [tuple(line.split("\t")[:3]) for line in sys.stdin]
+    lista.sort(key=lambda x: int(x[2]))
+    lista = lista[:6]
 
-    for tuple in list_tuple:
-        sys.stdout.write("{}   {}   {}\n".format(*tuple))
+    for linea in lista:
+        sys.stdout.write("{}   {}   {}\n".format(*linea))
