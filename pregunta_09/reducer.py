@@ -3,18 +3,9 @@
 #
 import sys
 
+if __name__ == "__main__":
+    list_tuple = [tuple(line.strip().split("\t")) for line in sys.stdin]
+    list_tuple = sorted(list_tuple, key=lambda x: int(x[2]))[:5]
 
-if __name__ == '__main__':
-
-    orden= [] 
-    for line in sys.stdin:
-
-        key, val1, val2 = line.strip().split(",")
-        val2 = int(val2)
-        orden.append([key,val1,val2])
-    
-
-    objetivo = sorted(orden, key =lambda x:(x[2]))
-    
-    for j in range(0,6):
-        sys.stdout.write("{}   {}   {}\n".format(objetivo[j][0],objetivo[j][1],objetivo[j][2]))
+    for tuple in list_tuple:
+        sys.stdout.write("{}   {}   {}\n".format(*tuple))

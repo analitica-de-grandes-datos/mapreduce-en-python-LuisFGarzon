@@ -2,7 +2,8 @@
 # >>> Escriba el codigo del mapper a partir de este punto <<<
 #
 import sys
+
 if __name__ == "__main__":
     for line in sys.stdin:
-        key,val1,val2    =   line.split()
-        sys.stdout.write('{}\t{}\t{}\n'.format(key,val1,val2))
+        letter, date, value = line.strip().split('   ')
+        sys.stdout.write("{}\t{}\t{}\n".format(letter, date, value))
