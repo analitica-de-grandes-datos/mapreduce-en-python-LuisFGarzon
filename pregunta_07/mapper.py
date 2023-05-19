@@ -2,19 +2,11 @@
 # >>> Escriba el codigo del mapper a partir de este punto <<<
 #
 import sys
+if __name__ == "__main__":
 
-
-if __name__ == '__main__':
-
-    orden= [] 
     for line in sys.stdin:
+        clean =   line.strip()
+        key, val1, val2 = clean.split("   ")
+        sys.stdout.write("{},{},{}\n".format(key,val1,val2))
 
-        key, val1, val2 = line.strip().split(",")
-        val2 = int(val2)
-        orden.append([key,val1,val2])
-    
 
-    elements = sorted(orden, key =lambda x:(x[0],x[2]))
-    
-    for element in elements:
-        sys.stdout.write("{}   {}   {}\n".format(element[0],element[1],element[2]))
