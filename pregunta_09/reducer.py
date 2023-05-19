@@ -9,5 +9,5 @@ if __name__ == "__main__":
         key,val1,val2   =   line.split()
         val2 =   int(val2)
         sys.stdout.write('{}   {}   {}\n'.format(key,val1,val2))
-        if delta == 6:
+        if delta == 5:
             break
