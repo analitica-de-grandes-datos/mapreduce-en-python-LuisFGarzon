@@ -4,6 +4,6 @@
 import sys
 if __name__ == "__main__":
     for line in sys.stdin:
-        letra,fecha,valor   =   line.split()
-        valor =   int(valor)
-        sys.stdout.write('{}   {}   {}\n'.format(letra,fecha,valor))
+        letter,val,date=line.split()
+        val=int(val)
+        sys.stdout.write('{}   {}   {}\n'.format(letter,date,val))

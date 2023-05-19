@@ -9,8 +9,9 @@ if __name__ == '__main__':
     orden= [] 
     for line in sys.stdin:
 
-        letra,fecha,valor = line.strip().split(",")
-        orden.append([letra,fecha,int(valor)])
+        key, val1, val2 = line.strip().split(",")
+        val2 = int(val2)
+        orden.append([key,val1,val2])
     
 
     elements = sorted(orden, key =lambda x:(x[0],x[2]))
