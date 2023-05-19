@@ -5,5 +5,5 @@ import sys
 
 if __name__ == "__main__":
     for line in sys.stdin:
-        letter, date, value = line.strip().split("   ")
-        sys.stdout.write("{}\t{}\t{}\n".format(letter, date, value))
+        key, val, val2 = line.strip().split("   ")
+        sys.stdout.write("{},{},{}\n".format(key, val, val2))
